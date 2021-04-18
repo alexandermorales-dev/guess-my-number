@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess my number</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/394b992799.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- game guidelines  -->
+
+      <div class="guidelines">
+        <p>&lt;Between 1 and 20 &gt;</p>
+      </div>
+
+      <!-- game title  -->
+      <div class="game-title">
+        <h1>guess my number!</h1>
+      </div>
+
+      <!-- again button  -->
+      <div class="btn-container">
+        <button type="button" class="btn">Again!</button>
+      </div>
+
+      <!-- secret number  -->
+      <div class="secret-number-container">
+        <div class="separator"></div>
+        <div class="secret-number">?</div>
+      </div>
+
+      <!-- bottom container for md and lg screens -->
+
+      <div class="bottom-section">
+        <!-- record container  -->
+
+        <div class="record-container">
+          <div class="guessing-txt">
+            <h4>start guessing</h4>
+          </div>
+          <div class="label">
+            <p><i class="far fa-star"></i> score:</p>
+          </div>
+          <div class="value">
+            <p>0</p>
+          </div>
+          <div class="label">
+            <p><i class="fas fa-star"></i> High score:</p>
+          </div>
+          <div class="value">
+            <p>0</p>
+          </div>
+        </div>
+
+        <!-- guess input  -->
+        <div class="guess">
+          <input type="number" />
+          <button type="button" class="btn">check!</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

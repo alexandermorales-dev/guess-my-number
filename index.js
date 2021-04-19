@@ -7,21 +7,21 @@ const guessingTxt = document.querySelector(".guessing-txt");
 const scoreTxt = document.querySelector(".value-score");
 const highScoreTxt = document.querySelector(".value-high-score");
 let secretNumber;
-let score = 20;
+let score;
 let highScore = 0;
-let isPlaying = true;
+let isPlaying;
 
-// generate random secret number
-
-secretNumber = Math.trunc(Math.random() * 21);
-console.log(secretNumber);
+// init values
+score = 20;
+isPlaying = true;
+scoreTxt.textContent = score;
+secretNumber = Math.trunc(Math.random() * 2) + 1;
 
 // check input against secret number
 btnCheck.addEventListener("click", function () {
   const guessInput = Number(document.querySelector(".guess-input").value);
-  console.log(guessInput);
   if (isPlaying) {
-    if (score > 0) {
+    if (score > 1) {
       if (guessInput === secretNumber) {
         guessingTxt.textContent = "Correct!";
         secretNumberText.textContent = secretNumber;
@@ -41,10 +41,22 @@ btnCheck.addEventListener("click", function () {
         guessingTxt.textContent = "Too low!";
       }
     } else {
-      scoreTxt.textContent = score;
+      scoreTxt.textContent = 0;
       guessingTxt.textContent = "You lost the game!";
       secretNumberText.textContent = secretNumber;
       mainContainer.classList.add("loser-class");
     }
   }
+});
+
+btnAgain.addEventListener("click", function () {
+  document.querySelector(".guess-input").value = 0;
+  secretNumber = Math.trunc(Math.random() * 21);
+  score = 20;
+  scoreTxt.textContent = score;
+  isPlaying = true;
+  mainContainer.classList.remove("loser-class");
+  mainContainer.classList.remove("winner-class");
+  secretNumberText.textContent = "?";
+  guessingTxt.textContent = "Start guessing";
 });

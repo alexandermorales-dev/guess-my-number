@@ -133,7 +133,7 @@ body {
   height: 100px;
   background-color: transparent;
   color: white;
-  border: 1px solid white;
+  border: 3px solid white;
   outline: none;
   margin: 10px;
   font-size: 2rem;
@@ -184,7 +184,7 @@ body {
     width: 200px;
     height: 150px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 5px solid white;
     outline: none;
     color: white;
     font-size: 3rem;

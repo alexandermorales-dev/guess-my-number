@@ -57,6 +57,7 @@ body {
   max-width: 200px;
   -webkit-box-shadow: 0 0 10px white;
   box-shadow: 0 0 10px white;
+  cursor: pointer;
 }
 
 .secret-number-container {

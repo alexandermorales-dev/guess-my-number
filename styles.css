@@ -139,6 +139,16 @@ body {
   text-align: center;
 }
 
+.winner-class {
+  background-color: green;
+  color: white;
+}
+
+.loser-class {
+  background-color: red;
+  color: white;
+}
+
 @media only screen and (min-width: 768px) {
   .main-container {
     display: flex;
@@ -199,7 +209,9 @@ body {
   }
 
   .value {
+    display: flex;
     text-align: left;
+    align-items: center;
   }
 
   .bottom-section {

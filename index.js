@@ -12,10 +12,25 @@ let highScore = 0;
 let isPlaying;
 
 // init values
+
 score = 20;
 isPlaying = true;
 scoreTxt.textContent = score;
-secretNumber = Math.trunc(Math.random() * 2) + 1;
+secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+// init function
+
+const initValues = function () {
+  score = 20;
+  isPlaying = true;
+  scoreTxt.textContent = score;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  document.querySelector(".guess-input").value = 0;
+  mainContainer.classList.remove("loser-class");
+  mainContainer.classList.remove("winner-class");
+  secretNumberText.textContent = "?";
+  guessingTxt.textContent = "Start guessing";
+};
 
 // check input against secret number
 btnCheck.addEventListener("click", function () {

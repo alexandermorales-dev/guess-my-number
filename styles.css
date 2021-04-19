@@ -98,6 +98,7 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(50px, auto);
   text-align: center;
   font-size: 0.65rem;
 }
@@ -137,6 +138,10 @@ body {
   margin: 10px;
   font-size: 2rem;
   text-align: center;
+}
+
+.guess button {
+  margin: 10px 0;
 }
 
 .winner-class {

@@ -50,7 +50,7 @@ body {
 .btn {
   background-color: #dadada;
   border-radius: 10px;
-  border-color: black;
+  border-color: transparent;
   outline: none;
   height: 50px;
   width: 70%;

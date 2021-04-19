@@ -1,4 +1,5 @@
 // selecting elements
+const mainContainer = document.querySelector(".main-container");
 const btnAgain = document.querySelector(".btn-again");
 const btnCheck = document.querySelector(".btn-check");
 const secretNumberText = document.querySelector(".secret-number");
@@ -24,7 +25,7 @@ btnCheck.addEventListener("click", function () {
       if (guessInput === secretNumber) {
         guessingTxt.textContent = "Correct!";
         secretNumberText.textContent = secretNumber;
-        secretNumberText.classList.add("winner-class");
+        mainContainer.classList.add("winner-class");
         isPlaying = false;
         if (score > highScore) {
           highScore = score;
@@ -39,11 +40,11 @@ btnCheck.addEventListener("click", function () {
         scoreTxt.textContent = score;
         guessingTxt.textContent = "Too low!";
       }
-    } else if (score === 0) {
+    } else {
       scoreTxt.textContent = score;
       guessingTxt.textContent = "You lost the game!";
       secretNumberText.textContent = secretNumber;
-      secretNumberText.classList.add("loser-class");
+      mainContainer.classList.add("loser-class");
     }
   }
 });

@@ -10,7 +10,7 @@
       src="https://kit.fontawesome.com/394b992799.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -42,26 +42,24 @@
         <!-- record container  -->
 
         <div class="record-container">
-          <div class="guessing-txt">
-            <h4>start guessing</h4>
-          </div>
+          <div class="guessing-txt">start guessing</div>
           <div class="label">
             <p><i class="far fa-star"></i> score:</p>
           </div>
-          <div class="value">
+          <div class="value value-score">
             <p>0</p>
           </div>
           <div class="label">
             <p><i class="fas fa-star"></i> High score:</p>
           </div>
-          <div class="value">
+          <div class="value value-high-score">
             <p>0</p>
           </div>
         </div>
 
         <!-- guess input  -->
         <div class="guess">
-          <input type="number" />
+          <input type="number" class="guess-input" />
           <button type="button" class="btn btn-check">check!</button>
         </div>
       </div>
